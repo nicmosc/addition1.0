@@ -18,7 +18,7 @@ app = Flask(__name__)
 # This route will show a form to perform an AJAX request
 # jQuery is loaded to execute the request and update the
 # value of the operation
-@app.route('/~Nicola/www/MSC-Project/CommunicationTests/helloflask/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
