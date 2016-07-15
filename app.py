@@ -30,10 +30,10 @@ def addNumbers():
     a = request.args.get('a', 0, type=int)
     b = request.args.get('b', 0, type=int)
 
-    #initRequest = requests.post("http://nlp.stanford.edu:8080/parser/index.jsp",
-                                #timeout=1)  # test if the parser is still at this address
-    #status_code = initRequest.status_code
-    #print status_code
+    initRequest = requests.post("http://nlp.stanford.edu:8080/parser/index.jsp",
+                                timeout=1)  # test if the parser is still at this address
+    status_code = initRequest.status_code
+    print status_code
 
     return jsonify(result=a + b)
 
