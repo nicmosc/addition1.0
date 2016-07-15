@@ -5,3 +5,4 @@ MarkupSafe==0.23
 simplejson==3.6.5
 virtualenv==15.0.1
 gunicorn==19.4.5
+requests==2.5.3

@@ -10,7 +10,7 @@
 # using the request object from flask. jsonigy is required
 # to send JSON as a response of a request
 from flask import Flask, render_template, request, jsonify
-
+import requests
 # Initialize the Flask application
 app = Flask(__name__)
 
@@ -26,9 +26,15 @@ def index():
 # integer numbers (defaulted to zero) and return the
 # result as a proper JSON response (Content-Type, etc.)
 @app.route('/_add_numbers')
-def add_numbers():
+def addNumbers():
     a = request.args.get('a', 0, type=int)
     b = request.args.get('b', 0, type=int)
+
+    #initRequest = requests.post("http://nlp.stanford.edu:8080/parser/index.jsp",
+                                #timeout=1)  # test if the parser is still at this address
+    #status_code = initRequest.status_code
+    #print status_code
+
     return jsonify(result=a + b)
 
 if __name__ == '__main__':
