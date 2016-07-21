@@ -21,11 +21,12 @@
                 var pwd = 'passwd';
                 var data = 'uname=' + name + '&password=' + pwd;
                 $.ajax({
+                    type: "GET",
                     url: "static/getfiles.php",
                     data: data,
                     success: function (html) {
                         //$("#message").html(html);
-                        console.log(html);
+                        alert(html);
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         alert("Error type" + textStatus + "occured, with value " + errorThrown);
